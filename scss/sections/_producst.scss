@@ -1,0 +1,49 @@
+@use "../custom" as *;
+@use "../components/mixins.scss" as *;
+
+.proizvodi {
+  h1 {
+    @include media-breakpoint-down(sm) {
+      font-size: 2.3rem;
+    }
+  }
+  h2 {
+    @include gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // Assuming 'gradient' is a defined mixin in your project
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.products-description {
+  margin-top: 0.5rem;
+  @include media-breakpoint-up(md) {
+    font-size: 1.3rem;
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      margin-bottom: 0.3rem;
+    }
+  }
+}
+
+.product-tile {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  @include media-breakpoint-up(md) {
+    padding: 3rem 0 4rem 0;
+  }
+}

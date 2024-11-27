@@ -1,0 +1,49 @@
+@use "../components/mixins.scss" as *;
+@use "../custom" as *;
+
+.menu {
+  @include gradient;
+  width: 100%;
+  height: fit-content;
+
+  .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 0;
+    box-sizing: border-box;
+
+    img {
+      height: 4rem;
+      width: fit-content;
+      box-shadow: 5xp 5px 0px gray;
+    }
+
+    p {
+      height: fit-content;
+      width: fit-content;
+      line-height: 2rem;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-left: 0.4rem;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+  }
+
+  li,
+  #contact-button {
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    :not(#contact-button) {
+      margin-right: 0.3rem;
+    }
+
+    &:hover:not(#contact-button) {
+      color: $secondary;
+    }
+  }
+}

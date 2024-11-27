@@ -1,0 +1,38 @@
+@use "./custom" as *;
+@use "./components/mixins.scss" as *;
+@use "./components/buttons.scss" as *;
+
+@use "./sections/navbar" as *;
+@use "./sections/intro" as *;
+@use "./sections/about" as *;
+@use "./sections/producst" as *;
+@use "./sections/contact" as *;
+@use "./sections/footer" as *;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//Heading Line
+
+.heading-line::before {
+  content: "";
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  background-color: $primary;
+  margin: 0 auto;
+}
+
+.heading-line::after {
+  content: "";
+  width: 2rem;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  background-color: $primary;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 60px;
+  height: 2px;
+}

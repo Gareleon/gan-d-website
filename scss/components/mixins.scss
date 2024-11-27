@@ -1,0 +1,16 @@
+@use "../custom" as *;
+
+@mixin gradient {
+  background: linear-gradient(-45deg, $blue, $industrial-gray);
+}
+
+@mixin r-gradient {
+  background: radial-gradient($blue, $industrial-gray);
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
